@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>A&N Tech Series 1</title>
+
+    <style>
+
+        /* BASIC SETTINGS */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fff0f6;
+            background-image: url("barbieBG.jpeg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #333;
+        }
+
+
+        /* MAIN CONTAINER */
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 25px auto;
+        }
+
+
+        /* HEADER */
+
+        header {
+            background-color: white;
+            padding: 18px 30px;
+            border-radius: 18px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            box-shadow: 0 4px 12px #ddd;
+        }
+
+        .logo {
+            color: #d94f87;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .tag {
+            color: #777;
+            font-size: 14px;
+        }
+
+
+        /* PRODUCT INTRODUCTION */
+
+        .product {
+            margin-top: 20px;
+            padding: 40px;
+
+            background-color: rgba(255, 255, 255, 0.94);
+
+            border-radius: 25px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            box-shadow: 0 5px 15px #ddd;
+        }
+
+        .product-info {
+            width: 50%;
+        }
+
+        .product-info p:first-child {
+            color: #d94f87;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .product-info h1 {
+            margin: 10px 0;
+            font-size: 60px;
+            color: #222;
+        }
+
+        .product-info h2 {
+            color: #d94f87;
+            margin-bottom: 20px;
+        }
+
+        .product-info p {
+            line-height: 1.6;
+        }
+
+
+        /* MAIN WATCH IMAGE */
+
+        .product-image {
+            width: 45%;
+            text-align: center;
+        }
+
+        .product-image img {
+            width: 350px;
+            height: 350px;
+            object-fit: contain;
+        }
+
+
+        /* SECTIONS */
+
+        .section {
+            margin-top: 35px;
+        }
+
+        .section > h2 {
+            text-align: center;
+            color: #d94f87;
+        }
+
+
+        /* DESCRIPTION */
+
+        .description {
+            background-color: white;
+            padding: 25px;
+            border-radius: 18px;
+
+            box-shadow: 0 4px 12px #ddd;
+
+            line-height: 1.6;
+        }
+
+        .description ul {
+            line-height: 2;
+        }
+
+
+        /* FEATURES */
+
+        .features {
+            display: flex;
+            gap: 20px;
+        }
+
+        .card {
+            width: 33.33%;
+            padding: 20px;
+
+            background-color: white;
+
+            text-align: center;
+
+            border: 2px solid #f2bfd3;
+            border-radius: 18px;
+
+            box-shadow: 0 4px 10px #ddd;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px #ccc;
+        }
+
+
+        /* DIFFERENT CARD */
+
+        #special {
+            background-color: #ffe1ed;
+            border-color: #d94f87;
+        }
+
+
+        /* FEATURE IMAGES */
+
+        .card img {
+            width: 130px;
+            height: 130px;
+            object-fit: contain;
+        }
+
+        .card h3 {
+            color: #d94f87;
+        }
+
+        .card p {
+            line-height: 1.5;
+        }
+
+
+        /* SPECIFICATIONS */
+
+        .specifications {
+            background-color: white;
+            padding: 25px;
+
+            border-radius: 18px;
+
+            box-shadow: 0 4px 12px #ddd;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: #d94f87;
+            color: white;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 12px;
+            text-align: left;
+        }
+
+
+        /* PRICING */
+
+        .pricing {
+            margin-top: 35px;
+            padding: 30px;
+
+            background-color: #d94f87;
+            color: white;
+
+            text-align: center;
+
+            border-radius: 20px;
+
+            box-shadow: 0 5px 15px #ccc;
+        }
+
+        .pricing h2 {
+            color: white;
+        }
+
+        .price {
+            font-size: 40px;
+            font-weight: bold;
+            margin: 15px;
+        }
+
+        .pricing ul {
+            list-style-position: inside;
+            line-height: 1.8;
+        }
+
+
+        /* BUY BUTTON */
+
+        .buy {
+            padding: 12px 30px;
+
+            border: none;
+            border-radius: 20px;
+
+            background-color: white;
+            color: #d94f87;
+
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+        .buy:hover {
+            background-color: #ffe1ed;
+        }
+
+
+        /* FOOTER */
+
+        footer {
+            padding: 25px;
+
+            text-align: center;
+
+            color: #666;
+        }
+
+
+        /* SMALL SCREEN */
+
+        @media (max-width: 700px) {
+
+            .product {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .product-info {
+                width: 100%;
+            }
+
+            .product-info h1 {
+                font-size: 45px;
+            }
+
+            .product-image {
+                width: 100%;
+            }
+
+            .product-image img {
+                width: 250px;
+                height: 250px;
+            }
+
+            .features {
+                flex-direction: column;
+            }
+
+            .card {
+                width: 100%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <div class="container">
+
+
+        <!-- COMPANY HEADER -->
+
+        <header>
+
+            <div class="logo">
+                A&N TECH
+            </div>
+
+            <div class="tag">
+                SMART TECHNOLOGY
+            </div>
+
+        </header>
+
+
+        <!-- PRODUCT INTRODUCTION -->
+
+        <div class="product">
+
+
+            <div class="product-info">
+
+                <p>
+                    A&N TECH PRESENTS
+                </p>
+
+                <h1>
+                    SERIES 1
+                </h1>
+
+                <h2>
+                    Smart. Simple. Yours.
+                </h2>
+
+                <p>
+                    The A&N Tech Series 1 is a modern smartwatch
+                    designed for everyday use. It combines useful
+                    smart features with a simple and stylish design.
+                </p>
+
+            </div>
+
+
+            <div class="product-image">
+
+                <img src="watch1.jpeg"
+                     alt="A&N Tech Series 1">
+
+            </div>
+
+
+        </div>
+
+
+        <!-- PRODUCT DESCRIPTION -->
+
+        <div class="section">
+
+            <h2>
+                PRODUCT DESCRIPTION
+            </h2>
+
+
+            <div class="description">
+
+                <p>
+                    The A&N Tech Series 1 is a smartwatch made for
+                    students and everyday users. It helps users stay
+                    connected while keeping track of their daily
+                    activities.
+                </p>
+
+                <p>
+                    Its simple design makes it comfortable and easy
+                    to use. The Series 1 provides useful features
+                    without making the smartwatch complicated.
+                </p>
+
+
+                <ul>
+
+                    <li>
+                        Activity tracking
+                    </li>
+
+                    <li>
+                        Smart notifications
+                    </li>
+
+                    <li>
+                        Long battery life
+                    </li>
+
+                    <li>
+                        Wireless connectivity
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT FEATURES -->
+
+        <div class="section">
+
+            <h2>
+                PRODUCT FEATURES
+            </h2>
+
+
+            <div class="features">
+
+
+                <!-- FEATURE 1 -->
+
+                <div class="card">
+
+                    <img src="watch1.jpeg"
+                         alt="Smart display">
+
+                    <h3>
+                        Smart Display
+                    </h3>
+
+                    <p>
+                        Clear display for viewing time,
+                        notifications, and other information.
+                    </p>
+
+                </div>
+
+
+                <!-- FEATURE 2 -->
+
+                <div class="card" id="special">
+
+                    <img src="watch2.jpeg"
+                         alt="Fitness tracking">
+
+                    <h3>
+                        Fitness Tracking
+                    </h3>
+
+                    <p>
+                        Helps you keep track of your daily
+                        activities and movement.
+                    </p>
+
+                </div>
+
+
+                <!-- FEATURE 3 -->
+
+                <div class="card">
+
+                    <img src="watch3.jpeg"
+                         alt="Wireless connection">
+
+                    <h3>
+                        Smart Connection
+                    </h3>
+
+                    <p>
+                        Receive notifications and stay
+                        connected through wireless technology.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <!-- SPECIFICATIONS -->
+
+        <div class="section">
+
+            <h2>
+                PRODUCT SPECIFICATIONS
+            </h2>
+
+
+            <div class="specifications">
+
+
+                <table>
+
+                    <tr>
+
+                        <th>
+                            Specification
+                        </th>
+
+                        <th>
+                            Details
+                        </th>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Display
+                        </td>
+
+                        <td>
+                            1.9-inch HD Display
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Battery
+                        </td>
+
+                        <td>
+                            Up to 7 Days
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Processor
+                        </td>
+
+                        <td>
+                            A&N Smart Processor
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Storage
+                        </td>
+
+                        <td>
+                            32 GB
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Connectivity
+                        </td>
+
+                        <td>
+                            Bluetooth 5.3
+                        </td>
+
+                    </tr>
+
+
+                </table>
+
+
+            </div>
+
+        </div>
+
+
+        <!-- PRICING -->
+
+        <div class="pricing">
+
+            <h2>
+                A&N TECH SERIES 1
+            </h2>
+
+            <div class="price">&#8369; 2,999</div>
+
+
+            <ul>
+
+                <li>
+                    Series 1 Smartwatch
+                </li>
+
+                <li>
+                    Charging Cable
+                </li>
+
+                <li>
+                    User Guide
+                </li>
+
+            </ul>
+
+
+            <button class="buy">
+                Buy Now
+            </button>
+
+        </div>
+
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            A&N Tech | Series 1 | 2026
+
+        </footer>
+
+
+    </div>
+
+
+</body>
+</html>
